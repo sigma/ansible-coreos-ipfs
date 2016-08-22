@@ -1,0 +1,8 @@
+galaxy_info:
+  author: Yann Hodique
+  description: CoreOS ipfs
+  license: BSD
+  min_ansible_version: 2.0
+  categories:
+    - system
+dependencies: []

@@ -1,0 +1,13 @@
+---
+- name: Make sure install dir exists
+  sudo: yes
+  file: path={{ipfs_install_dir}} state=directory
+
+- name: Stat ipfs
+  stat: path="{{ipfs_install_dir}}/ipfs" checksum_algorithm=sha1
+  register: st
+    
+- name: Install ipfs
+  shell: >-
+    docker run --entrypoint="/bin/cat" {{ipfs_image}}:{{ipfs_tag}} {{ipfs_image_path}} | sudo tee {{ipfs_install_dir}}/ipfs > /dev/null
+  when: st.stat.checksum|default('None') != ipfs_sha1

@@ -1,0 +1,6 @@
+---
+ipfs_image: ipfs/go-ipfs
+ipfs_tag: v0.4.2
+ipfs_sha1: c1c67bd2a1e36f5b5f0bfb2bd0b20f48e18d63c0
+ipfs_image_path: /usr/local/bin/ipfs
+ipfs_install_dir: /opt/bin
